@@ -10,8 +10,8 @@
     
     <meta name="generator" content="Hugo 0.39" />
     
-    <title>Topics &middot; </title>
-    <meta content="Topics - " property="og:title">
+    <title>How to identify all classes that are used in Java application ? &middot; </title>
+    <meta content="How to identify all classes that are used in Java application ? - " property="og:title">
     <meta content=" - " property="og:description">
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i|Roboto+Mono:300,300i,400,400i" rel="stylesheet">
@@ -32,9 +32,7 @@
     <!-- Icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
     <link rel="shortcut icon" href="/favicon.png">
-    <!-- RSS -->
-    <link href="https://akhalikov.github.io/topics/index.xml" rel="alternate" type="application/rss+xml" title="" />
-    <link href="https://akhalikov.github.io/topics/index.xml" rel="feed" type="application/rss+xml" title="" />
+    
 
 	</head>
     <body>
@@ -94,13 +92,63 @@
 </div>
 
         <div class="content container">
-            <h1 class="title">Topics</h1>
-<ul class="posts">
-    
-</ul>
+            <div class="post">
+  <h1>How to identify all classes that are used in Java application ?</h1>
+  
+  <div class="col-sm-12 col-md-12">
+    <span class="text-left post-date meta">
+            
+       
+        <i class="fas fa-calendar-alt"></i> 22 Apr 2018, 00:00
+      
+      
+      
+      
+        
+        
+            <br/>
+             <i class="fas fa-tags"></i>
+            
+            <a class="meta" href="/tags/development">development</a> 
+        
+            <a class="meta" href="/tags/java">java</a>
+        
+      
+      
+      <br/>
+      <i class="fas fa-clock"></i> 1 min read 
+      </span>  
+  </div>    
+  
+  
 
+<p>Some day a Java programmer might want to know what classes are used in his application.
+For example, they want to clean up messy enterprise project from classes
+that are no longer in use, but steel exist in a project.</p>
+
+<p>How to accomplish that ?</p>
+
+<h2 id="using-jvm-options">Using JVM options</h2>
+
+<p>Several approaches were described in this <a href="https://habrahabr.ru/post/141699/">Habrahabr article</a>.
+Most of them are quite complex and project-specific, but one very simple and is worth mentioning.</p>
+
+<pre><code>java -XX:+TraceClassLoading -XX:+UnlockDiagnosticVMOptions -XX:+LogVMOutput
+-XX:LogFile=java_*.log -XX:-DisplayVMOutput HelloWorld
+</code></pre>
+
+<p><code>*</code> - will be automatically replaced by PID.</p>
+
+</div>
             <div class="footer">
-                
+                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script type="text/javascript">
+    hljs.configure({languages: []});
+    hljs.initHighlightingOnLoad();
+</script>
+
+
             </div>
         </div>
         
